@@ -1,2 +1,2 @@
 # MERN-Stack-Development
-These are simple projects based on HTML, CSS, JavaScript, MongoDB, Express, React and Node.Js 
+These is a collection of simple projects based on HTML, CSS, JavaScript, MongoDB, Express, React and Node.js.
