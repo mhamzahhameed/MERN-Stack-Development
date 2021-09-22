@@ -20,9 +20,14 @@ function showSuccess(input) {
 }
 
 // Function to check if email is valid
-function isValidEmail(email,message) {
+function checkEmail(input) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    if ( re.test(input.value.trim())) {
+        showSuccess(input);
+    }
+    else {
+            showError(input,  'Please provide a valid emai');
+    }
 }
 
 // Function to check required fields have data
@@ -42,9 +47,34 @@ function getFieldId(input) {
     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
+// Function to check length of input field
+function checklength(input,min,max) {
+    if( input.value.length < min) {
+        showError(input,`${getFieldId(input)} needs to be atleast ${min} characters`);
+    }
+    else if (input.value.length > max) {
+        showError(input,`${getFieldId(input)} needs to be less than ${max} characters`);
+    }
+    else {
+        showSuccess(input);
+    }
+}
+
+// Function to check if password and confirm password match
+
+function chechPasswordMatch(input1, input2) {
+    if ( input1.value !== input2.value ) {
+        showError(inpu2t, "Passwords don't match")
+    }
+}
+
 // This is event listner for the form on submission
 form.addEventListener('submit', function(evt) {
     evt.preventDefault();
 
     checkRequired([username,email,password,password2]);
+    checklength(username,3,10);
+    checklength(password,6,30);
+    checkEmail(email);
+
 });
