@@ -42,11 +42,6 @@ function checkRequired(inputArray) {
     })
 }
 
-// Function to get the id of the input field
-function getFieldId(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
 // Function to check length of input field
 function checklength(input,min,max) {
     if( input.value.length < min) {
@@ -64,8 +59,13 @@ function checklength(input,min,max) {
 
 function chechPasswordMatch(input1, input2) {
     if ( input1.value !== input2.value ) {
-        showError(inpu2t, "Passwords don't match")
+        showError(input2, "Passwords don't match");
     }
+}
+
+// Function to get the id of the input field
+function getFieldId(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 // This is event listner for the form on submission
@@ -76,5 +76,6 @@ form.addEventListener('submit', function(evt) {
     checklength(username,3,10);
     checklength(password,6,30);
     checkEmail(email);
+    chechPasswordMatch(password, password2);
 
 });
