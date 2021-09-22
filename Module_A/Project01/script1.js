@@ -6,7 +6,7 @@ const password2 = document.querySelector('#password2');
 
 // All Functions
 // Function to show error
-function showError(input,message) {
+function showerror(input,message) {
     const formControl = input.parentElement;
     formControl.className = 'form-control error';
     const small = formControl.querySelector('small');
@@ -25,26 +25,38 @@ function isValidEmail(email,message) {
     return re.test(String(email).toLowerCase());
 }
 
-// Function to check required fields have data
-function checkRequired(inputArray) {
-    inputArray.forEach(function(input) {
-        if ( input.value === '' ) {
-            showError( input, `${getFieldId(input)} is required`);
-        }
-        else {
-            showSuccess(input);
-        }
-    })
-}
-
-// Function to get the id of the input field
-function getFieldId(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
 // This is event listner for the form on submission
 form.addEventListener('submit', function(evt) {
     evt.preventDefault();
+    
+    if( username.value === '' ) {
+    showerror(username,'username is required');
+    }
+    else {
+    showSuccess(username)
+    }
 
-    checkRequired([username,email,password,password2]);
+    if( email.value === '' ) {
+    showerror(email,'email is required');
+    }
+    else if (!isValidEmail(email.value)) {
+        showerror(email,'Email is invalid');
+    }
+    else {
+    showSuccess(email);
+    }
+
+    if( password.value === '' ) {
+    showerror(password,'password is required');
+    }
+    else {
+    showSuccess(password);
+    }
+
+    if( password2.value === '' ) {
+    showerror(password2,'password2 is required');
+    }
+    else {
+    showSuccess(password2);
+    }
 });
