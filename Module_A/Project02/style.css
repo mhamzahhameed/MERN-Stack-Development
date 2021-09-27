@@ -8,6 +8,7 @@ body {
     background-color: #222E50;
     display: flex;
     flex-direction: column;
+    color: white;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -105,8 +106,8 @@ p.totals span {
 
 a {
     cursor: pointer;
-    background-color: darkblue;
-    border: 2px solid darkblue;
+    background-color: #B0A990;
+    border: 2px solid #B0A990;
     border-radius: 3px;
     color: black;
     display: block;
