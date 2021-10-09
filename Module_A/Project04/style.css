@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #B5BAD0;
+    font-family: 'Open Sans', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 30;
+}
+
+p {
+    text-align: center;
+}
+
+.btn {
+    color: black;
+    background-color: #81D2C7;
+    padding: 10px 20px;
+    border: 0;
+}
+
+.currency {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currency select {
+    padding: 10px 20px;
+    border: 1px solid #7389ae;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.currency input {
+    padding: 10px 20px;
+    border: 0;
+    background-color: transparent;
+    font-size: 20px;
+    text-align: right;
+    margin: 20px;
+}
+
+.flip-rates-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    cursor: pointer;
+    background-color: #B0A990;
+    border: 2px solid #B0A990;
+    border-radius: 3px;
+    color: black;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 10%;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
