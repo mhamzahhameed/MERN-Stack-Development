@@ -195,7 +195,7 @@ padding: 20px;
     }
 }
 
-a {
+.home, .module-A {
     cursor: pointer;
     background-color: lightseagreen;
     border: 2px solid lightseagreen;
@@ -212,6 +212,6 @@ a {
     align-items: center;
 }
 
-a:hover {
+.home:hover, .module-A:hover {
     text-decoration: underline;
 }
