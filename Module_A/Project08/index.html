@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Meal Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Meal Generator</h1>
+        <div class="flex">
+            <!-- Search Form -->
+            <form class="flex" id="submit">
+                <input type="text" id="search" placeholder="Search" >
+                <button class="search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <!-- Random Meal Generator Button -->
+            <button class="generate-btn" id="generate">
+                <i class="fas fa-random"></i>
+            </button>
+        </div>
+
+        <!-- Heading for the search results -->
+        <div id="results-heading"></div>
+
+        <!-- Div to contain the meals returned from API -->
+        <div class="meals" id="meals"></div>
+
+        <!-- Details of selected meal -->
+        <div id="selected-meal"></div>
+
+    </div>
+    
+    <a class="home" href="../../Module_A/index.html">Module A</a>
+    <a class="module-A" href="../../index.html">Home</a>
+    <script src="script.js"></script>
+</body>
+</html>
