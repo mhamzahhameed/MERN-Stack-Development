@@ -85,7 +85,7 @@ h2 {
     cursor: pointer;
     background-color:  #3725f8;
     border: 2px solid #3725f8;
-    border-radius: 3px;
+    border-radius: 4px;
     color: white;
     display: block;
     font-size: 16px;
@@ -94,19 +94,19 @@ h2 {
     width: 100%;
 }
 
-.form .home {
- cursor: pointer;
- background-color: lightgray;
- border: 2px solid lightgray;
- border-radius: 4px;
- color: white;
- display: block;
- font-size: 16px;
- padding: 10px;
- margin-top: 20px;
- width: 100%;
- text-align: center;
-}
+.home {
+    cursor: pointer;
+    background-color: lightgray;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+   }
 
 a {
     color: white;
